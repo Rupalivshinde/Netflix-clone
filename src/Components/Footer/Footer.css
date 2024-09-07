@@ -1,0 +1,96 @@
+.footer {
+    padding: 30px 15px;
+    /* Adjusted padding for better readability */
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 70vh;
+    text-align: center;
+    /* Center text content */
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    /* Center the icons */
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.footer-icons img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.footer ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Default: 4 columns */
+    gap: 15px;
+    margin-bottom: 30px;
+    list-style: none;
+    padding: 0;
+    /* Remove default padding */
+    justify-content: center;
+    /* Center grid items */
+}
+
+.footer ul li {
+    cursor: pointer;
+    padding: 5px 0;
+    /* Add padding for better spacing */
+}
+
+.copyright-text {
+    color: gray;
+    font-size: 14px;
+}
+
+/* Medium Screens (max-width: 800px) */
+@media (max-width: 800px) {
+    .footer {
+        padding: 20px 10px;
+        /* Adjust padding */
+    }
+
+    .footer-icons img {
+        width: 25px;
+        /* Smaller icons on medium screens */
+    }
+
+    .footer ul {
+        grid-template-columns: repeat(2, 1fr);
+        /* Two columns on medium screens */
+        gap: 10px;
+        /* Adjust gap between items */
+    }
+
+    .footer ul li {
+        font-size: 14px;
+        /* Adjust font size */
+    }
+}
+
+/* Small Screens (max-width: 500px) */
+@media (max-width: 500px) {
+    .footer {
+        padding: 15px 5px;
+        /* Further reduced padding */
+    }
+
+    .footer-icons img {
+        width: 20px;
+        /* Smaller icons */
+    }
+
+    .footer ul {
+        grid-template-columns: repeat(2, 1fr);
+        /* Single column on small screens */
+        gap: 8px;
+        /* Adjust gap */
+    }
+
+    .footer ul li {
+        font-size: 12px;
+        /* Smaller font size */
+    }
+}
