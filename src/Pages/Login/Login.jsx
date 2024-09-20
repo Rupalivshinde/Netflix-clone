@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Login.css';
 import login_logo from '/src/assets/logo.png';
 import { login, signUp } from '../../Components/Firebase';
+import { toast } from 'react-toastify'; // To show error messages
 
 function Login() {
     const [signState, setSignState] = useState("Sign In");
@@ -16,14 +17,17 @@ function Login() {
         try {
             if (signState === "Sign In") {
                 await login(email, password);
-                navigate("/"); // Redirect to home page upon successful login
+                // Only navigate if login is successful
+                navigate("/");
             } else {
                 await signUp(name, email, password);
-                navigate("/"); // Redirect to home page upon successful sign up
+                // Only navigate if sign up is successful
+                navigate("/");
             }
         } catch (error) {
-            // Handle authentication errors if needed
+            // Handle authentication errors
             console.error("Authentication Error:", error);
+            toast.error(error.message || "Authentication failed!"); // Show error message
         }
     };
 

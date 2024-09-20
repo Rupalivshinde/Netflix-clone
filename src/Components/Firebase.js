@@ -43,11 +43,13 @@ const signUp = async (name, email, password) => {
 
 // Login function
 const login = async (email, password) => {
+    const auth = getAuth();
     try {
-        await signInWithEmailAndPassword(auth, email, password);
-        toast.success("Logged in successfully!");
+        const userCredential = await signInWithEmailAndPassword(auth, email, password);
+        return userCredential.user; // Return the authenticated user if successful
     } catch (error) {
-        toast.error(`Login Error: ${error.message}`);
+        // If login fails, throw the error so it can be caught
+        throw error;
     }
 };
 
