@@ -35,7 +35,7 @@ function AppRoutes() {
     <>
       <ToastContainer />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/Netflix-clone" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/player/:id" element={<Player />} />
       </Routes>

@@ -11,9 +11,10 @@ function TitleCard({ title, category }) {
         method: 'GET',
         headers: {
             accept: 'application/json',
-            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmOWIxNzEwY2E3NzQ1ODU4NzJhZjQ0NmFlNjg1MDYzYSIsIm5iZiI6MTcyNTcwNDU1MC4zMzM5NTcsInN1YiI6IjY2ZGFiNGI1Zjc5ZWRmNWRmMDE2MGFjNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.gEUfYWcbNqnLElfKJ2otI2Pq8pH3WMr_B4Y1W-KxSTU'
+            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmOWIxNzEwY2E3NzQ1ODU4NzJhZjQ0NmFlNjg1MDYzYSIsIm5iZiI6MTcyNzE4Nzk5NC43OTMwMzksInN1YiI6IjY2ZGFiNGI1Zjc5ZWRmNWRmMDE2MGFjNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.VYZ4M7bwEYoLhgU7FntNEEZezfBGGAAmz-w-tTG2RrM'
         }
     };
+
 
 
     const handlewheel = (event) => {
